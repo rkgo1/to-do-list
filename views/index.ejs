@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Practice</title>
+</head>
+ 
+<body>
+<div>
+<h2>Items you need to do </h2>
+<form action ="/addtask" method="POST">
+<input type="text" name="newtask" placeholder="New Task?">
+<button> Add</button>
+<h2> Tasks </h2>
+<% for( var i = 0; i < task.length; i++){ %>
+<--><li><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </li>
+<% } %>
+<button formaction="/removetask" type="submit" id="top"> Remove </button><button formaction="/emptylist" type="submit" id="top">Clear list</button>
+</form>
+ 
+
+</div>
+</body>
+</html>
